@@ -18,7 +18,6 @@ const Card = ({ frontText, backText, color }) => {
           {backText}
         </div>
       </div>
-      <button className="arrow-button"></button>
     </div>
   );
 }

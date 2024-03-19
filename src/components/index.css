@@ -78,30 +78,29 @@ h2 {
   box-shadow: rgba(0, 0, 0, 1) 0px 5px 20px;
 }
 
-.arrow-button {
+.previos-arrow-button, .arrow-button{
   border-radius: 4px;
   background-color: #5ca1e1;
   border: none;
   color: #fff;
   text-align: center;
   font-size: 32px;
-  padding: 16px;
+  padding: 10px;
   width: 220px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 36px;
   box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
-}
-
-.arrow-button{
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
+
+
 .arrow-button:after {
-  content: '»';
+  content: '>';
   position: absolute;
   opacity: 0;  
   top: 14px;
@@ -109,12 +108,64 @@ h2 {
   transition: 0.5s;
 }
 
-.arrow-button:hover{
+.arrow-button:hover, 
+.previos-arrow-button:hover{
   padding-right: 24px;
   padding-left:8px;
 }
 
-.arrow-button:hover:after {
+.arrow-button:hover:after, 
+.previos-arrow-button:hover:after {
   opacity: 1;
   right: 10px;
+}
+
+.correct{
+  border: 3px solid blue;
+}
+
+.incorrect{
+  border: 3px solid red;
+}
+
+/* Estilos para el botón submit */
+button[type="submit"] {
+  background-color: #5ca1e1; /* Color de fondo verde */
+  color: white; /* Color del texto blanco */
+  padding: 10px 20px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambio de cursor al pasar el ratón */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilos para el cuadro de texto de input */
+input[type="text"] {
+  width: 100%; /* Ancho completo */
+  padding: 10px; /* Espaciado interno */
+  margin-bottom: 10px; /* Margen inferior */
+  border: 3px solid #ccc; /* Borde gris */
+  border-radius: 5px; /* Bordes redondeados */
+  box-sizing: border-box; /* Incluir el padding en el ancho total */
+}
+
+/* Estilo para el borde azul cuando la respuesta es correcta */
+input[type="text"].correct {
+  border-color: blue; /* Borde azul */
+}
+
+/* Estilo para el borde rojo cuando la respuesta es incorrecta */
+input[type="text"].incorrect {
+  border-color: red; /* Borde rojo */
+}
+
+.button-container{
+  display: flex; 
+  align-items: center;
+  justify-content: space-around;
+  
+}
+
+.submit-container{
+  display: flex;
+  justify-content: center;
 }
