@@ -78,7 +78,7 @@ h2 {
   box-shadow: rgba(0, 0, 0, 1) 0px 5px 20px;
 }
 
-.previos-arrow-button, .arrow-button{
+.previous-arrow-button, .arrow-button{
   border-radius: 4px;
   background-color: #5ca1e1;
   border: none;
@@ -99,8 +99,17 @@ h2 {
 
 
 
+.previous-arrow-button:after {
+  content: '←';
+  position: static !important;
+  opacity: 0;  
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+}
+
 .arrow-button:after {
-  content: '>';
+  content: '→';
   position: absolute;
   opacity: 0;  
   top: 14px;
@@ -109,13 +118,13 @@ h2 {
 }
 
 .arrow-button:hover, 
-.previos-arrow-button:hover{
+.previous-arrow-button:hover{
   padding-right: 24px;
   padding-left:8px;
 }
 
 .arrow-button:hover:after, 
-.previos-arrow-button:hover:after {
+.previous-arrow-button:hover:after {
   opacity: 1;
   right: 10px;
 }

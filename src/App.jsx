@@ -13,7 +13,7 @@ function App() {
     setCurrentColor(getRandomColor());
   };
 
-  const previosCard = () => {
+  const previousCard = () => {
     const newIndex = (currentCardIndex - 1 + phrases.length) % phrases.length;
     setCurrentCardIndex(newIndex);
     setCurrentColor(getRandomColor());
@@ -49,7 +49,7 @@ function App() {
       </div>
       <Card frontText={phrases[currentCardIndex].frontText} backText={phrases[currentCardIndex].backText} color={currentColor} />
       <div className="button-container">
-        <button className="previos-arrow-button" onClick={previosCard}>{'Previos'}</button>
+        <button className="previous-arrow-button" onClick={previousCard}>{'Prev'}</button>
         <button className="arrow-button" onClick={nextCard}>{'Next'}</button>
       </div>
       <AnswerInput onAnswerSubmit={handleAnswerSubmit} />

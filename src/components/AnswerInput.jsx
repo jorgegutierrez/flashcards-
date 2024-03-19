@@ -28,10 +28,10 @@ const AnswerInput = ({ onAnswerSubmit }) => {
         value={answer} 
         onChange={handleInputChange} 
         className={inputClassName} // Aplicar la clase CSS dinámicamente
-        placeholder="Ingresa tu respuesta..." 
+        placeholder="Enter your answer..." 
         required 
       /><div className='submit-container'>
-      <button type="submit">Enviar</button>
+      <button type="submit">Send</button>
       </div>
     </form>
   );
